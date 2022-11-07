@@ -14,7 +14,7 @@ const Header = () => {
 
     const menu = <>
         <li><Link to='/home'>Home</Link></li>
-        <li><Link to='/home'>Others</Link></li>
+        <li><Link to='/services'>Services</Link></li>
 
         {user?.email ?
             <li><Link onClick={handleLogout} to='/home' className='bg-yellow-300 font-bold'>Logout</Link></li>
@@ -35,7 +35,7 @@ const Header = () => {
                             {menu}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-xl">GameNote</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
