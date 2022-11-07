@@ -8,7 +8,7 @@ const Home = () => {
     const size = 3;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/games/?size=${size}`)
+        fetch(`http://localhost:5000/services/?size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setGames(data)

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Game = ({ game }) => {
 
@@ -13,7 +14,7 @@ const Game = ({ game }) => {
                     <h2 className="card-title">{game.name}</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     <div className="card-actions justify-end">
-                        <button onClick={handleClick} className="btn btn-sm btn-primary">Buy Now</button>
+                        <Link to={`/services/${game._id}`}><button className="btn btn-sm btn-primary">Details</button></Link>
                     </div>
                 </div>
             </div>
