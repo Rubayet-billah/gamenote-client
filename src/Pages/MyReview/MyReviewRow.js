@@ -63,14 +63,16 @@ const MyReviewRow = ({ review, update, setUpdate }) => {
 
     return (
         <div>
-            <div className='border rounded p-3 mt-3'>
-                <div className='flex items-center'>
+            <div className='border rounded p-3 md:p-8  my-3'>
+                <div className='md:flex items-center'>
                     <img className='w-12 h-12 rounded-full' src={image} alt="" />
-                    <div className='ml-2'>
+                    <div className='md:ml-2'>
                         <h3 className='text-xl font-bold'>{reviewer}</h3>
                         <p>{email}</p>
                     </div>
+                    <h2 className='text-xl font-bold ml-auto'>Service: {serviceName}</h2>
                 </div>
+                <hr className='my-2' />
                 <div className='flex justify-between'>
                     <p className='w-3/4'>{description}</p>
                     <div>
