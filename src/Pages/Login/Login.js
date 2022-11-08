@@ -1,9 +1,16 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
-    const { loginUser } = useContext(AuthContext)
+    const { loginUser, googleLogin, githubLogin } = useContext(AuthContext)
+
+
+    const navigate = useNavigate();
+
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,6 +22,18 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                navigate(from, { replace: true })
+            })
+            .catch(err => console.error(err))
+    }
+
+    // handle google log in
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                navigate(from, { replace: true })
             })
             .catch(err => console.error(err))
     }
@@ -47,6 +66,15 @@ const Login = () => {
                                 <button type='submit' className="btn btn-primary">Login</button>
                             </div>
                         </form>
+                        <div className='mb-5'>
+                            <hr className='mx-5' />
+                            <p className='text-center my-2'>Or Continue With</p>
+                            <div className='flex justify-center'>
+                                <button onClick={handleGoogleLogin} className='bg-red-500 text-white px-2 py-1 rounded-sm mx-2'>
+                                    <FaGoogle></FaGoogle>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

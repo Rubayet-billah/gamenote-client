@@ -19,8 +19,16 @@ const AddReview = ({ service }) => {
             description,
             ratings,
         }
-
-        console.log(myReview)
+        fetch('http://localhost:5000/reviews', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(myReview)
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
     }
 
     return (
@@ -28,8 +36,8 @@ const AddReview = ({ service }) => {
             <form onSubmit={handleReviewSubmit}>
                 <div className="form-control">
                     <div className="input-group">
-                        <select name='ratings' className="select select-bordered">
-                            <option disabled selected>Select Star</option>
+                        <select name='ratings' className="select select-bordered" defaultValue='5.0'>
+                            <option disabled>Select Star</option>
                             <option>5.0</option>
                             <option>4.5</option>
                             <option>4.0</option>

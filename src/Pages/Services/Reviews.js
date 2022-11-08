@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import AddReview from './AddReview';
@@ -6,7 +6,16 @@ import AddReview from './AddReview';
 const Reviews = ({ service }) => {
     const { user } = useContext(AuthContext)
 
+    const query = service.name;
+    // console.log(query)
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/reviews/?service=${query}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+    }, [query])
 
     return (
         <div>
