@@ -5,9 +5,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const MyReviewRow = ({ review, update, setUpdate }) => {
     const { _id, serviceName, reviewer, email, image, description, ratings } = review;
-    const notify = () => toast.success("User deleted successfully");
 
     const handleDelete = (id) => {
+        const notify = () => toast.success("User deleted successfully");
         const confirmation = window.confirm('Are you sure to delete this review')
         if (confirmation) {
             fetch(`http://localhost:5000/myreview/${id}`, {
@@ -23,17 +23,41 @@ const MyReviewRow = ({ review, update, setUpdate }) => {
     }
 
     const handleUpdate = (id) => {
-        fetch(`http://localhost:5000/myreview/${id}`, {
+        // fetch(`http://localhost:5000/myreview/${id}`, {
+        //     method: 'PATCH',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify({ description: 'this is edited' })
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data)
+        //         setUpdate(!update)
+        //     })
+
+
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const newDescription = event.target.description.value;
+        console.log(newDescription)
+        const notify = () => toast.success("User Updated successfully");
+        fetch(`http://localhost:5000/myreview/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify({ description: 'this is edited' })
+            body: JSON.stringify({ description: newDescription })
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
-                setUpdate(!update)
+                if (data.modifiedCount > 0) {
+                    event.target.reset()
+                    notify();
+                    setUpdate(!update)
+                }
             })
     }
 
@@ -51,9 +75,30 @@ const MyReviewRow = ({ review, update, setUpdate }) => {
                     <p className='w-3/4'>{description}</p>
                     <div>
                         <p className='flex items-center'>{ratings} <FaStar className='text-yellow-400' /></p>
-                        <button onClick={() => handleUpdate(_id)} className='btn btn-sm btn-outline mr-2'>Edit</button> <br />
+                        <label htmlFor="my-modal-5" onClick={handleUpdate} className='btn btn-sm btn-outline mr-2'>Edit</label> <br />
                         <button onClick={() => handleDelete(_id)} className='btn btn-sm btn-outline btn-error mt-3'><FaTrashAlt className='mx-2' /></button>
                     </div>
+
+                    {/* The button to open modal */}
+                    {/* <label htmlFor="my-modal-5" className="btn">open modal</label> */}
+
+                    {/* Put this part before </body> tag */}
+                    <input type="checkbox" id="my-modal-5" className="modal-toggle" />
+                    <div className="modal">
+                        <div className="modal-box w-11/12 max-w-5xl">
+                            <h3 className="font-bold text-2xl text-center mb-3">Update review</h3>
+                            <form onSubmit={handleSubmit}>
+                                <textarea name='description' defaultValue={description} className="textarea textarea-bordered w-full" placeholder="Descriptopn"></textarea>
+                                <div className="modal-action">
+                                    <button className='btn btn-sm btn-primary' type='submit'>Update</button>
+                                    <label htmlFor="my-modal-5" className="btn btn-sm">Close</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    {/* modal end */}
+
                 </div>
                 <ToastContainer
                     position="top-center"
