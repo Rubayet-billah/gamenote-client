@@ -7,9 +7,13 @@ import ReviewRow from './ReviewRow';
 const Reviews = ({ service }) => {
     const { user } = useContext(AuthContext)
     const [reviews, setReviews] = useState([])
+    const [update, setUpdate] = useState(false)
+
+    console.log(update)
 
     const query = service.name;
     // console.log(query)
+
 
     useEffect(() => {
         fetch(`http://localhost:5000/reviews/?service=${query}`)
@@ -17,7 +21,7 @@ const Reviews = ({ service }) => {
             .then(data => {
                 setReviews(data)
             })
-    }, [query])
+    }, [query, update])
 
     return (
         <div>
@@ -32,7 +36,7 @@ const Reviews = ({ service }) => {
             </div>
             <div>
                 {
-                    user?.uid ? <AddReview service={service} /> : <>
+                    user?.uid ? <AddReview service={service} update={update} setUpdate={setUpdate} /> : <>
                         <Link to='/login' className='btn btn-primary'>Please login to add review</Link>
                     </>
                 }

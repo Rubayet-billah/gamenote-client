@@ -3,9 +3,11 @@ import React from 'react';
 const Details = ({ service }) => {
     const { name, img, price } = service;
     return (
-        <div>
-            <img src={img} alt="" />
-            <h2 className="text-3xl">{name}</h2>
+        <div className='md:flex'>
+            <img className='md:w-1/2' src={img} alt="" />
+            <div className="text-3xl md:w-1/2 text-center pt-6">
+                <h2>{name}</h2>
+            </div>
         </div>
     );
 };

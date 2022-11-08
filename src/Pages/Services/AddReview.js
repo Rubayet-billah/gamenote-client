@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider';
 
-const AddReview = ({ service }) => {
+const AddReview = ({ service, update, setUpdate }) => {
     const { user } = useContext(AuthContext);
 
 
@@ -29,6 +29,8 @@ const AddReview = ({ service }) => {
         }).then(res => res.json())
             .then(data => {
                 console.log(data)
+                setUpdate(!update)
+                form.reset()
             })
     }
 
