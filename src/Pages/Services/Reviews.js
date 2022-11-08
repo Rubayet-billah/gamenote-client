@@ -22,42 +22,13 @@ const Reviews = ({ service }) => {
     return (
         <div>
             <div>
-                <div className="overflow-x-auto w-full">
-                    <table className="table w-full">
+                {
+                    reviews?.map(rvw => <ReviewRow
+                        key={rvw._id}
+                        review={rvw}
+                    />)
+                }
 
-                        <thead>
-                            <tr>
-                                <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
-                                </th>
-                                <th>Name</th>
-                                <th>Job</th>
-                                <th>Favorite Color</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                reviews?.map(rvw => <ReviewRow
-                                    key={rvw._id}
-                                    review={rvw}
-                                />)
-                            }
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Job</th>
-                                <th>Favorite Color</th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
-
-                    </table>
-                </div>
             </div>
             <div>
                 {
@@ -66,7 +37,7 @@ const Reviews = ({ service }) => {
                     </>
                 }
             </div>
-        </div>
+        </div >
     );
 };
 

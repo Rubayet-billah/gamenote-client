@@ -1,38 +1,25 @@
 import React from 'react';
+import { FaStar } from 'react-icons/fa';
 
 const ReviewRow = ({ review }) => {
-    const { serviceName, reviewer, image, description, ratings } = review;
+    const { serviceName, reviewer, email, image, description, ratings } = review;
     // console.log(review)
     return (
-        <tr>
-            <th>
-                <label>
-                    <input type="checkbox" className="checkbox" />
-                </label>
-            </th>
-            <td>
-                <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                        <div className="mask mask-squircle w-12 h-12">
-                            <img src={image} />
-                        </div>
-                    </div>
-                    <div>
-                        <div className="font-bold">Hart Hagerty</div>
-                        <div className="text-sm opacity-50">United States</div>
+        <div>
+            <div className='border rounded p-3 mt-3'>
+                <div className='flex items-center'>
+                    <img className='w-12 h-12 rounded-full' src={image} alt="" />
+                    <div className='ml-2'>
+                        <h3 className='text-xl font-bold'>{reviewer}</h3>
+                        <p>{email}</p>
                     </div>
                 </div>
-            </td>
-            <td>
-                Zemlak, Daniel and Leannon
-                <br />
-                <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-            </td>
-            <td>Purple</td>
-            <th>
-                <button className="btn btn-ghost btn-xs">details</button>
-            </th>
-        </tr>
+                <div className='flex justify-between'>
+                    <p className='w-3/4'>{description}</p>
+                    <p className='flex items-center'>{ratings} <FaStar className='text-yellow-400' /></p>
+                </div>
+            </div>
+        </div>
     );
 };
 

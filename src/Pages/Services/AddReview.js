@@ -14,7 +14,8 @@ const AddReview = ({ service }) => {
 
         let myReview = {
             serviceName: service.name,
-            reviewer: user.name,
+            reviewer: user.displayName,
+            email: user.email,
             image: user.photoURL,
             description,
             ratings,

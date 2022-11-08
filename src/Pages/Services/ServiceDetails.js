@@ -7,7 +7,7 @@ const ServiceDetails = () => {
     const service = useLoaderData()
     const { name, img, price } = service;
     return (
-        <div className='grid md:grid-cols-2'>
+        <div className=''>
             <Details service={service}></Details>
             <Reviews service={service}></Reviews>
         </div>
