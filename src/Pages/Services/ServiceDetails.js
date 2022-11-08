@@ -9,7 +9,7 @@ const ServiceDetails = () => {
     return (
         <div className='grid md:grid-cols-2'>
             <Details service={service}></Details>
-            <Reviews></Reviews>
+            <Reviews service={service}></Reviews>
         </div>
     );
 };
