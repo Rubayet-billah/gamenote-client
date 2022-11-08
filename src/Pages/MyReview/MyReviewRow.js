@@ -1,17 +1,25 @@
 import React from 'react';
 import { FaStar, FaTrashAlt } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const MyReviewRow = ({ review }) => {
+const MyReviewRow = ({ review, update, setUpdate }) => {
     const { _id, serviceName, reviewer, email, image, description, ratings } = review;
+    const notify = () => toast.success("User deleted successfully");
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/myreview/${id}`, {
-            method: 'DELETE',
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
+        const confirmation = window.confirm('Are you sure to delete this review')
+        if (confirmation) {
+            fetch(`http://localhost:5000/myreview/${id}`, {
+                method: 'DELETE',
             })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    notify();
+                    setUpdate(!update)
+                })
+        }
     }
 
     const handleUpdate = (id) => {
@@ -25,6 +33,7 @@ const MyReviewRow = ({ review }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                setUpdate(!update)
             })
     }
 
@@ -46,6 +55,17 @@ const MyReviewRow = ({ review }) => {
                         <button onClick={() => handleDelete(_id)} className='btn btn-sm btn-outline btn-error mt-3'><FaTrashAlt className='mx-2' /></button>
                     </div>
                 </div>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light" />
             </div>
         </div>
     );
