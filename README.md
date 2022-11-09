@@ -4,9 +4,9 @@ Project name: [GameNote](https://my-assignment-11-92c6d.web.app/)
 
 Live site link [https://my-assignment-11-92c6d.web.app/]
 
-## Project Descriptions
+## Project Description
 
-- This is a gmaing website which provides all kind of top up of various games.
+- This is a gmaing website which provides all kind of top up service of various games.
 - You can grab special offer of your desire game from here.
 - This is a single page application(SPA) website.
 - This project is made using popular javascript framework react.
