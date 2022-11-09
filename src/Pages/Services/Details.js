@@ -6,7 +6,7 @@ const Details = ({ service }) => {
     return (
         <div className='md:flex my-5 border '>
             <img className='md:w-1/2 rounded-lg' src={img} alt="" />
-            <div className=" md:w-1/2 px-3 py-4">
+            <div className=" md:w-1/2 p-4 md:px-6 lg:px-8">
                 <h2 className='text-3xl text-center'>{name}</h2>
                 <p>{details}</p>
                 <div className='flex justify-between items-end'>

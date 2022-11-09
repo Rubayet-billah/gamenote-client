@@ -41,8 +41,8 @@ const AddReview = ({ service, update, setUpdate }) => {
                 <div className="form-control">
                     <div className="input-group">
                         <textarea name='description' className="textarea textarea-bordered w-full" placeholder="Description"></textarea>
-                        <select name='ratings' className="select select-bordered">
-                            <option disabled>Select Star</option>
+                        <select name='ratings' className="select select-sm select-bordered">
+                            <option disabled>Ratings</option>
                             <option>5.0</option>
                             <option>4.5</option>
                             <option>4.0</option>

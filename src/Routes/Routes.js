@@ -1,5 +1,6 @@
 import Main from "../layouts/Main";
 import AddService from "../Pages/AddService/AddService";
+import Blog from "../Pages/Blog/Blog";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -26,8 +27,12 @@ export const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
+                path: '/blogs',
+                element: <Blog></Blog>
+            },
+            {
                 path: '/addservice',
-                element: <AddService></AddService>
+                element: <PrivatRoute><AddService></AddService></PrivatRoute>
             },
             {
                 path: '/services',
