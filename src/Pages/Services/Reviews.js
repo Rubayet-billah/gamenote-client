@@ -37,7 +37,7 @@ const Reviews = ({ service }) => {
             <div>
                 {
                     user?.uid ? <AddReview service={service} update={update} setUpdate={setUpdate} /> : <>
-                        <Link to='/login' className='btn btn-primary'>Please login to add review</Link>
+                        <Link to='/login'><button className='btn btn-primary block mx-auto my-4'>Please login to add review</button></Link>
                     </>
                 }
             </div>

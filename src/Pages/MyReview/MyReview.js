@@ -16,8 +16,12 @@ const MyReview = () => {
     }, [user?.email, update])
     if (myReviews.length === 0) {
         return (
-            <div className='my-5 text-center'>
-                <h1 className='text-3xl md:text-5xl'>You have no previous reviews</h1>
+            <div className="hero h-96 md:min-h-screen">
+                <div className="hero-content text-center">
+                    <div className="max-w-md">
+                        <h1 className="text-5xl font-bold">No reviews were added</h1>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -35,11 +35,13 @@ const AddReview = ({ service, update, setUpdate }) => {
     }
 
     return (
-        <div>
+        <div className='my-5'>
+            <h2 className='text-xl my-2'>Write Your Review</h2>
             <form onSubmit={handleReviewSubmit}>
                 <div className="form-control">
                     <div className="input-group">
-                        <select name='ratings' className="select select-bordered" defaultValue='5.0'>
+                        <textarea name='description' className="textarea textarea-bordered w-full" placeholder="Description"></textarea>
+                        <select name='ratings' className="select select-bordered">
                             <option disabled>Select Star</option>
                             <option>5.0</option>
                             <option>4.5</option>
@@ -54,9 +56,7 @@ const AddReview = ({ service, update, setUpdate }) => {
                         </select>
                     </div>
                 </div>
-                <br />
-                <textarea name='description' className="textarea textarea-bordered w-full" placeholder="Description"></textarea>
-                <button type='submit' className='btn btn-secondary'>Review</button>
+                <button type='submit' className='btn btn-secondary btn-sm mt-3'>Add Review</button>
             </form>
         </div>
     );
