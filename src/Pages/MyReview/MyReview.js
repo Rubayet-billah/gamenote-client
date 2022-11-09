@@ -8,7 +8,11 @@ const MyReview = () => {
     const [update, setUpdate] = useState(false)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myreview/?email=${user?.email}`)
+        fetch(`http://localhost:5000/myreview/?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessKey')}`
+            }
+        })
             .then(res => res.json())
             .then(data => {
                 setMyReviews(data)
