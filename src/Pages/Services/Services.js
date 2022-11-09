@@ -5,7 +5,7 @@ import Game from '../Game/Game';
 const Services = () => {
     const games = useLoaderData();
     return (
-        <div>
+        <div className='my-5'>
             <main className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5'>
                 {
                     games.map(gm => <Game

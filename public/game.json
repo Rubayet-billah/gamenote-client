@@ -1,0 +1,62 @@
+[
+  {
+    "img": "https://i.ibb.co/vv4K27q/free-fire.jpg?fbclid=IwAR2xDKNg70G-SZOm09ONc2Y93IF9Z9vxRYeli7Xq8uvGeIAhZhAiHewgVEc",
+    "category": "Battle Royal",
+    "name": "Free Fire",
+    "credit": "300 Dimonds",
+    "duration": 30,
+    "price": 12,
+    "seller": "Mr. Augustin",
+    "details": "Free Fire, also known as Garena Free Fire, is a battle royale game developed by the Vietnamese game company 111dots Studio and published by Garena for Android and iOS. It became the most downloaded mobile game globally in 2019. As of 2021, Free Fire had surpassed 150 million daily active users. In this survival shooting game you can purchase costumes you like with dimonds."
+  },
+  {
+    "img": "https://i.ibb.co/yQvVftJ/PUBG.jpg?fbclid=IwAR2n9x34ghYYttSU8xljbBu0ErcvocPQLKyP77UZY9tDyVWnsZCgELOUTKo",
+    "category": "Battle Royal",
+    "name": "PUBG Mobile",
+    "credit": "10000 Gold",
+    "duration": 30,
+    "price": 15,
+    "seller": "Mr. Augustin",
+    "details": "PUBG is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, duo, or with a small team of up to four people."
+  },
+  {
+    "img": "https://i.ibb.co/fDk14k5/Clash-of-Clan.jpg?fbclid=IwAR18py-vq73YnwElIa_7ZgsEWwMzgDBVBVqF8iGX76XQgS0DkBs9Jcdh52s",
+    "category": "Fantasy",
+    "name": "Clash of Clans",
+    "credit": "500 Gems",
+    "duration": 30,
+    "price": 10,
+    "seller": "Mr. Augustin",
+    "details": "The game is set in a fantasy-themed persistent world where the player is a chief of a village. Clash of Clans tasks players to build their own village using the resources gained from attacking other player's villages with troops; earning rewards, buying them with medals or by producing them at their own village."
+  },
+  {
+    "img": "https://i.ibb.co/NmgWrwc/Asphalt-9.jpg?fbclid=IwAR1U993oCmNWg0dOyq4TinUNUslq0jZJKnIdTECXtyYkuZoRjyJ3RuHAFhA",
+    "category": "Racing",
+    "name": "Asphalt 9",
+    "credit": "5000 Token",
+    "duration": 30,
+    "price": 15,
+    "seller": "Mr. Augustin",
+    "details": "The gameplay in Asphalt 9 is similar to the other Asphalt Games with noticeable differences in graphics and design. There were 48 cars featured in the game when soft-launched, but the worldwide release saw the introduction of four new cars, leading to 52 cars. There are currently 181 cars as of the October 2022 update."
+  },
+  {
+    "img": "https://i.ibb.co/z47FL1r/call-of-duty.jpg?fbclid=IwAR1oZd9StVK-I0jI-ShOaDBJeASfWEysMvvh4U7av2SyxWKos0hcLHkiqMM",
+    "category": "Battle Royal",
+    "name": "Call of Duty",
+    "credit": "2 Battle Pass",
+    "duration": 30,
+    "price": 18,
+    "seller": "Mr. Augustin",
+    "details": "Call of Duty is a first-person shooter video game franchise published by Activision. Starting out in 2003, it first focused on games set in World War II. Over time, the series has seen games set in the midst of the Cold War, futuristic worlds, and outer space. The games were first developed by Infinity Ward, then also by Treyarch and Sledgehammer Games. Several spin-off and handheld games were made by other developers. The most recent title, Call of Duty: Modern Warfare II, was released on October 28, 2022."
+  },
+  {
+    "img": "https://i.ibb.co/vmvmwpp/genshin-impact.jpg?fbclid=IwAR1ZeZM_pUGTrQqkdwcFPRXKdnmlbXbTaV1tnLjCC3GyxkMrjp7043w7VQ0",
+    "category": "Action Role",
+    "name": "Genshin Impact",
+    "credit": "1 Character",
+    "duration": 30,
+    "price": 20,
+    "seller": "Mr. Augustin",
+    "details": "Genshin Impact is an open-world action role-playing game that allows the player to control one of four interchangeable characters in a party. Switching between characters can be done quickly during combat, allowing the player to use several different combinations of skills and attacks.Characters may have their strengths enhanced in various ways, such as increasing a character's level and improving artifacts and the weapons that the character equips."
+  }
+]
