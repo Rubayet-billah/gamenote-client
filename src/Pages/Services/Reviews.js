@@ -16,7 +16,7 @@ const Reviews = ({ service }) => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews/?service=${query}`)
+        fetch(`https://assignment-11-server-puce.vercel.app/reviews/?service=${query}`)
             .then(res => res.json())
             .then(data => {
                 setReviews(data)

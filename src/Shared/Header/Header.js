@@ -41,7 +41,7 @@ const Header = () => {
                             {menu}
                         </ul>
                     </div>
-                    <Link to='/home' className="btn btn-ghost normal-case text-xl md:text-2xl lg:ml-12">GameNote</Link>
+                    <Link to='/home' className="btn btn-ghost normal-case text-2xl md:text-4xl font-bold lg:ml-12"><span className='text-primary'>GAME</span><span className='text-secondary'>NOTE</span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">

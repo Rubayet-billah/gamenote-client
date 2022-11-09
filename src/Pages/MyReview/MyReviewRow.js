@@ -10,7 +10,7 @@ const MyReviewRow = ({ review, update, setUpdate }) => {
         const notify = () => toast.success("User deleted successfully");
         const confirmation = window.confirm('Are you sure to delete this review')
         if (confirmation) {
-            fetch(`http://localhost:5000/myreview/${id}`, {
+            fetch(`https://assignment-11-server-puce.vercel.app/myreview/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
@@ -23,7 +23,7 @@ const MyReviewRow = ({ review, update, setUpdate }) => {
     }
 
     const handleUpdate = (id) => {
-        // fetch(`http://localhost:5000/myreview/${id}`, {
+        // fetch(`https://assignment-11-server-puce.vercel.app/myreview/${id}`, {
         //     method: 'PATCH',
         //     headers: {
         //         'content-type': 'application/json'
@@ -44,7 +44,7 @@ const MyReviewRow = ({ review, update, setUpdate }) => {
         const newDescription = event.target.description.value;
         console.log(newDescription)
         const notify = () => toast.success("User Updated successfully");
-        fetch(`http://localhost:5000/myreview/${_id}`, {
+        fetch(`https://assignment-11-server-puce.vercel.app/myreview/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

@@ -20,7 +20,7 @@ const AddReview = ({ service, update, setUpdate }) => {
             description,
             ratings,
         }
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://assignment-11-server-puce.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

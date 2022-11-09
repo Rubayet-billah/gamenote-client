@@ -11,7 +11,16 @@ const Blog = () => {
                     What is the difference between SQL and NoSQL?
                 </div>
                 <div className="collapse-content">
-                    <p>CORS stands for Cross-Origin Resource Sharing. It allows us to relax the security applied to an API. This is done by bypassing the Access-Control-Allow-Origin headers, which specify which origins can access the API.                        In other words, CORS is a browser security feature that restricts cross-origin HTTP requests with other servers and specifies which domains access your resources.</p>
+                    <p>The five critical differences between SQL vs NoSQL are:
+                        <br />
+                        1. SQL databases are relational, NoSQL databases are non-relational. <br />
+                        2. SQL databases use structured query language and have a predefined schema. NoSQL databases have dynamic schemas for unstructured data.
+                        <br />
+                        3. SQL databases are vertically scalable, while NoSQL databases are horizontally scalable.
+                        <br />
+                        4. SQL databases are table-based, while NoSQL databases are document, key-value, graph, or wide-column stores.
+                        <br />
+                        5. SQL databases are better for multi-row transactions, while NoSQL is better for unstructured data like documents or JSON.</p>
                 </div>
             </div>
 
@@ -20,17 +29,13 @@ const Blog = () => {
                     What is JWT, and how does it work?
                 </div>
                 <div className="collapse-content">
-                    <p>Firebase is platfrom of Google that provides the backend benifits to a normal user.Its build for mainly authentication and hosting a simple website.But there are also many purpose of fireabse.
-                        And its a verified and safe to protect our informations. <br />
-                        There are alternatives of firebase we can use.Heres some : <br />
-                        <li>MongoDB.</li>
-                        <li>Oracle Database.</li>
-                        <li>Amazon Redshift.</li>
-                        <li>DataStax Enterprise.</li>
-                        <li>Redis Enterprise Cloud.</li>
-                        <li>Cloudera Enterprise Data Hub.</li>
-                        <li>Db2.</li>
-                        <li>Couchbase Server.</li>
+                    <p>JSON Web Token (JWT) is an open standard (RFC 7519) for securely transmitting information between parties as JSON object.
+
+                        It is compact, readable and digitally signed using a private key/ or a public key pair by the Identity Provider(IdP). So the integrity and authenticity of the token can be verified by other parties involved.
+
+                        The purpose of using JWT is not to hide data but to ensure the authenticity of the data. JWT is signed and encoded, not encrypted.
+
+                        JWT is a token based stateless authentication mechanism. Since it is a client-side based stateless session, server doesn't have to completely rely on a datastore(database) to save session information.
                     </p>
                 </div>
             </div>
@@ -40,9 +45,25 @@ const Blog = () => {
                     What is the difference between javascript and NodeJS?
                 </div>
                 <div className="collapse-content">
-                    <p>
-                        Private route also a simple route as the public route.Generally the display content is the children of that private route.And the private route return the child component based on on or more conditions.
-                        if the user cannot pass the conditions he/she will not able to see the displaycontent of the private route and generally redirected to the login or sign up page.
+                    <p> Differences between JS and NodeJS <br />
+                        1. JavaScript is a client-side scripting language that is lightweight, cross-platform, and interpreted. Both Java and HTML include it. Node.js, on the other hand, is a V8-based server-side programming language.
+                        <br />
+                        As a result, it is used to create network-centric applications. It's a networked system made for data-intensive real-time applications. If we compare node js vs. python, it is clear that node js will always be the preferred option.
+
+                        <br />
+                        2. JavaScript is a simple programming language that can be used with any browser that has the JavaScript Engine installed. Node.js, on the other hand, is an interpreter or execution environment for the JavaScript programming language. It requires libraries that can be conveniently accessed from JavaScript programming to be more helpful.
+                        <br />
+
+                        3. Any engine may run JavaScript. As a result, writing JavaScript is incredibly easy, and any working environment is similar to a complete browser. Node.js, on the other hand, only enables the V8 engine. Written JavaScript code, on the other hand, can run in any context, regardless of whether the V8 engine is supported.
+                        <br />
+
+                        4. A specific non-blocking operation is required to access any operating system. There are a few essential objects in JavaScript, but they are entirely OS-specific.
+
+
+                        Node.js, on the other hand, can now operate non-blocking software tasks out of any JavaScript programming. It contains no OS-specific constants. Node.js establishes a strong relationship with the system files, allowing companies to read and write to the hard drive.
+                        <br />
+
+                        5. The critical benefits of JavaScript include a wide choice of interfaces and interactions and just the proper amount of server contact and direct visitor input.
                     </p>
                 </div>
             </div>
@@ -53,7 +74,8 @@ const Blog = () => {
                 </div>
                 <div className="collapse-content">
                     <p>
-                        Node.js is a JavaScript runtime environment.It is used as backend service where javascript works on the server-side of the application. This way javascript is used on both frontend and backend. Node. js runs on chrome v8 engine which converts javascript code into machine code, it is highly scalable, lightweight, fast, and data-intensive.
+                        NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them. <br />
+                        And thats how it handles multiple request at the same time.
                     </p>
                 </div>
             </div>

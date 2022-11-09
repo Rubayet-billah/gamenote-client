@@ -12,7 +12,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/?size=${size}`)
+        fetch(`https://assignment-11-server-puce.vercel.app/services/?size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setGames(data)
