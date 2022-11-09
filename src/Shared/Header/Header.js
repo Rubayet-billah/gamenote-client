@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import { FaUserAlt } from 'react-icons/fa'
 
 const Header = () => {
 
@@ -39,7 +40,7 @@ const Header = () => {
                             {menu}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">GameNote</a>
+                    <Link to='/home' className="btn btn-ghost normal-case text-xl">GameNote</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
@@ -47,7 +48,12 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Get started</a>
+                    {
+                        user?.email ? <span className='font-bold'>{user?.displayName}</span> : <></>
+                    }
+                    {
+                        user?.photoURL ? <img title={user?.email} className='w-8 h-8 rounded-full mx-2' src={user.photoURL} alt="" /> : <FaUserAlt />
+                    }
                 </div>
             </div>
         </div>
