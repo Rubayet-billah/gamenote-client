@@ -5,10 +5,10 @@ import Header from '../Shared/Header/Header';
 
 const Main = () => {
     return (
-        <div className='container mx-auto'>
+        <div>
             <Header></Header>
             <section className=' min-h-screen flex flex-col justify-between'>
-                <main className=''>
+                <main className='container mx-auto'>
                     <Outlet></Outlet>
                 </main>
                 <footer>
