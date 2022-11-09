@@ -31,7 +31,7 @@ const Header = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-200">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -41,16 +41,16 @@ const Header = () => {
                             {menu}
                         </ul>
                     </div>
-                    <Link to='/home' className="btn btn-ghost normal-case text-xl">GameNote</Link>
+                    <Link to='/home' className="btn btn-ghost normal-case text-xl md:text-2xl lg:ml-12">GameNote</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         {menu}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end md:mr-8">
                     {
-                        user?.email ? <span className='font-bold'>{user?.displayName}</span> : <></>
+                        user?.email ? <span className='font-bold hidden md:inline-block'>{user?.displayName}</span> : <></>
                     }
                     {
                         user?.photoURL ? <img title={user?.email} className='w-8 h-8 rounded-full mx-2' src={user.photoURL} alt="" /> : <FaUserAlt />
