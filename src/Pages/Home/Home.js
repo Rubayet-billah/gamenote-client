@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Game from '../Game/Game';
 import homeBanner from '../../assets/homeBanner.png'
+import Banner from './Banner';
 
 const Home = () => {
     const [games, setGames] = useState([])
@@ -18,7 +19,8 @@ const Home = () => {
     return (
         <div>
             <header className='relative'>
-                <img src={homeBanner} className='rounded' alt="" />
+                {/* <img src={homeBanner} className='rounded' alt="" /> */}
+                <Banner></Banner>
             </header>
             <main className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5'>
                 {

@@ -18,6 +18,7 @@ const Header = () => {
 
         {user?.email ?
             <>
+                <li><Link to='/addservice'>Add Service</Link></li>
                 <li><Link to='/myreview'>My Reviews</Link></li>
                 <li><Link onClick={handleLogout} to='/home' className='bg-yellow-300 font-bold'>Logout</Link></li>
             </>
