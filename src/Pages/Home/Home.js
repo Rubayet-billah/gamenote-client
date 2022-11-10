@@ -4,6 +4,7 @@ import Game from '../Game/Game';
 import homeBanner from '../../assets/homeBanner.png'
 import Banner from './Banner';
 import useTitle from '../../hooks/useTitle';
+import Statistics from './Statistics';
 
 const Home = () => {
     const [games, setGames] = useState([])
@@ -32,8 +33,9 @@ const Home = () => {
                     />)
                 }
             </main>
-
             <Link to='/services'><button className='btn btn-sm btn-outline block w-fit mx-auto my-5'>See All Services</button></Link>
+
+            <Statistics></Statistics>
         </div>
     );
 };
