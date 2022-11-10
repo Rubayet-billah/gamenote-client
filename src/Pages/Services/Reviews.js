@@ -11,7 +11,7 @@ const Reviews = ({ service }) => {
 
     console.log(update)
 
-    const query = service.name;
+    const query = service._id;
     // console.log(query)
 
 

@@ -14,6 +14,7 @@ const AddReview = ({ service, update, setUpdate }) => {
 
         let myReview = {
             date: new Date(),
+            serviceId: service._id,
             serviceName: service.name,
             reviewer: user.displayName,
             email: user.email,
