@@ -1,19 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddService = () => {
     useTitle('Add Service')
 
+    const notify = () => toast.success("Service Added Successfully");
     const handleSubmit = (e) => {
         e.preventDefault();
-        const from = e.target;
-        const serviceName = from.name.value;
-        const serviceImg = from.image.value;
-        const serviceItem = from.item.value;
-        const servicePrice = from.price.value;
-        const serviceSeller = from.seller.value;
-        const serviceDescription = from.description.value;
+        const form = e.target;
+        const serviceName = form.name.value;
+        const serviceImg = form.image.value;
+        const serviceItem = form.item.value;
+        const servicePrice = form.price.value;
+        const serviceSeller = form.seller.value;
+        const serviceDescription = form.description.value;
 
 
         const addedService = {
@@ -38,6 +41,10 @@ const AddService = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                if (data.acknowledged) {
+                    notify();
+                    form.reset()
+                }
             })
     }
     return (
@@ -92,6 +99,17 @@ const AddService = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light" />
         </div>
     );
 };

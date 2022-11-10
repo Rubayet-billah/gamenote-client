@@ -27,7 +27,7 @@ const Home = () => {
                 <Banner></Banner>
             </header>
             <hr className='my-5' />
-            <h2 className='text-4xl text-center'>Get your desire game top-up</h2>
+            <h2 className='text-4xl text-center'>Get Your Desire Game Top-Up</h2>
             <main className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5'>
                 {
                     games.map(gm => <Game

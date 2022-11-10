@@ -13,6 +13,7 @@ const AddReview = ({ service, update, setUpdate }) => {
         const description = form.description.value;
 
         let myReview = {
+            date: new Date(),
             serviceName: service.name,
             reviewer: user.displayName,
             email: user.email,
@@ -20,6 +21,7 @@ const AddReview = ({ service, update, setUpdate }) => {
             description,
             ratings,
         }
+        console.log(myReview);
         fetch('https://assignment-11-server-puce.vercel.app/reviews', {
             method: 'POST',
             headers: {
