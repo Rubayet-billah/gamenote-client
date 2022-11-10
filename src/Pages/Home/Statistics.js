@@ -39,7 +39,9 @@ const Statistics = () => {
 
             </div>
             {/* statistic chart  */}
-            <Chart></Chart>
+            <div className=''>
+                <Chart></Chart>
+            </div>
         </div>
     );
 };

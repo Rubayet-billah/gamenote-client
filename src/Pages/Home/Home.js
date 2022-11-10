@@ -5,6 +5,7 @@ import homeBanner from '../../assets/homeBanner.png'
 import Banner from './Banner';
 import useTitle from '../../hooks/useTitle';
 import Statistics from './Statistics';
+import Pricing from './Pricing/Pricing';
 
 const Home = () => {
     const [games, setGames] = useState([])
@@ -25,6 +26,8 @@ const Home = () => {
                 {/* <img src={homeBanner} className='rounded' alt="" /> */}
                 <Banner></Banner>
             </header>
+            <hr className='my-5' />
+            <h2 className='text-4xl text-center'>Get your desire game top-up</h2>
             <main className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5'>
                 {
                     games.map(gm => <Game
@@ -34,8 +37,14 @@ const Home = () => {
                 }
             </main>
             <Link to='/services'><button className='btn btn-sm btn-outline block w-fit mx-auto my-5'>See All Services</button></Link>
-
+            <hr className='my-5' />
             <Statistics></Statistics>
+            {/* pricing  */}
+            <hr className='my-5' />
+            <section>
+                <h2 className='text-4xl text-center'>Get Premium Services</h2>
+                <Pricing></Pricing>
+            </section>
         </div>
     );
 };
