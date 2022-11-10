@@ -5,7 +5,7 @@ import { FaGoogle } from 'react-icons/fa';
 import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
-    const { loginUser, googleLogin, githubLogin } = useContext(AuthContext)
+    const { loginUser, googleLogin } = useContext(AuthContext)
     useTitle('Login')
 
     const navigate = useNavigate();

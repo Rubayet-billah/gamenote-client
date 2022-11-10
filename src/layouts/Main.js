@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FaSpinner } from 'react-icons/fa';
 import { Outlet } from 'react-router-dom';
+import { AuthContext } from '../contexts/AuthProvider';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
+import Spinner from '../Spinner/Spinner';
 
 const Main = () => {
+    const { loader } = useContext(AuthContext)
+
+    if (loader) {
+        return <Spinner></Spinner>
+    }
     return (
         <div>
             <Header></Header>
