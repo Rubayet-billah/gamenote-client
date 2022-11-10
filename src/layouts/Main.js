@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { FaSpinner } from 'react-icons/fa';
 import { Outlet } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
 import Footer from '../Shared/Footer/Footer';

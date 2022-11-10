@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Game from '../Game/Game';
-import homeBanner from '../../assets/homeBanner.png'
 import Banner from './Banner';
 import useTitle from '../../hooks/useTitle';
 import Statistics from './Statistics';
@@ -22,8 +21,7 @@ const Home = () => {
     }, [])
     return (
         <div>
-            <header className='relative'>
-                {/* <img src={homeBanner} className='rounded' alt="" /> */}
+            <header>
                 <Banner></Banner>
             </header>
             <hr className='my-5' />

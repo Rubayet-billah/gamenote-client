@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -52,45 +51,46 @@ const AddService = () => {
             <div className="hero">
                 <div className="hero-content flex-col w-full">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold mb-5">Add Service</h1>
+                        <h1 className="text-5xl font-bold">Add Service</h1>
                     </div>
+                    <p className='text-center'>Here you can add new service relevent to this website.But you must provide all the service information.</p>
                     <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Service Name</span>
                                 </label>
-                                <input type="name" name='name' placeholder="service name" className="input input-bordered" />
+                                <input type="name" name='name' placeholder="service name" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Service Image</span>
                                 </label>
-                                <input type="text" name='image' placeholder="service image url" className="input input-bordered" />
+                                <input type="text" name='image' placeholder="service image url" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Service Item</span>
                                 </label>
-                                <input type="text" name='item' placeholder="service item" className="input input-bordered" />
+                                <input type="text" name='item' placeholder="service item" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Service Price</span>
                                 </label>
-                                <input type="text" name='price' placeholder="service price" className="input input-bordered" />
+                                <input type="text" name='price' placeholder="service price" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Service Seller</span>
                                 </label>
-                                <input type="text" name='seller' placeholder="service seller" className="input input-bordered" />
+                                <input type="text" name='seller' placeholder="service seller" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Service Description</span>
                                 </label>
-                                <textarea name='description' className="textarea textarea-bordered w-full" placeholder="add description"></textarea>
+                                <textarea name='description' className="textarea textarea-bordered w-full" placeholder="add description" required></textarea>
                             </div>
                             <div className="form-control mt-6">
                                 <button type='submit' className="btn btn-primary">Add Service</button>
