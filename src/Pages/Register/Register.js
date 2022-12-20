@@ -23,7 +23,21 @@ const Register = () => {
                 console.log(user)
                 updateUserProfile(name, photo)
                     .then(() => {
-                        navigate('/')
+                        // get jwt token
+                        const currentUser = { email: user.email }
+                        fetch('https://assignment-11-server-puce.vercel.app/jwt', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(currentUser)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                console.log(data)
+                                localStorage.setItem('accessKey', data.token)
+                                navigate('/')
+                            })
                     })
                     .catch(err => console.error(err))
             })

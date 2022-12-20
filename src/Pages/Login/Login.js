@@ -25,7 +25,6 @@ const Login = () => {
                 console.log(user)
                 // get jwt token
                 const currentUser = { email: user.email }
-                // console.log(currentUser)
                 fetch('https://assignment-11-server-puce.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
