@@ -5,7 +5,8 @@ const Statistics = () => {
     return (
         <div className='w-fit mx-auto my-5'>
             <h2 className='text-4xl text-center'>Site Stats</h2>
-            <div className="stats shadow">
+            {/* <div className="stats shadow"> */}
+            <div className="md:grid md:grid-cols-2 lg:grid-cols-3 shadow">
 
                 <div className="stat">
                     <div className="stat-figure text-primary">

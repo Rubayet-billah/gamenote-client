@@ -46,26 +46,31 @@ const Chart = () => {
 
 
     return (
-        <div className='w-fit mx-auto mt-8'>
-            <LineChart
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                    top: 5,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                }}
+        <div style={{ width: "100%", height: 300 }}>
+
+            <ResponsiveContainer
+            // className='my-5'
+            // width='100%'
+            // height={300}
             >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="views" stroke="#d930bd" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="likes" stroke="#2318f0" />
-            </LineChart>
+                <LineChart
+                    data={data}
+                    margin={{
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                    }}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Line type="monotone" dataKey="views" stroke="#d930bd" activeDot={{ r: 8 }} />
+                    <Line type="monotone" dataKey="likes" stroke="#2318f0" />
+                </LineChart>
+            </ResponsiveContainer>
         </div>
     );
 };

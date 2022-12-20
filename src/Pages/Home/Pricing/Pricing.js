@@ -2,7 +2,7 @@ import React from 'react';
 
 const Pricing = () => {
     return (
-        <div className='my-5 grid grid-cols-2 md:grid-cols-3 gap-6'>
+        <div className='my-5 grid md:grid-cols-3 gap-6'>
             <div className='bg-base-200 shadow-md p-5 text-center rounded-lg'>
                 <p>Free</p>
                 <h2 className='text-3xl text-primary'>$ 0.00 <span className='text-base'>/mon</span></h2>
