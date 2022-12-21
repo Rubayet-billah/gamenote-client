@@ -7,10 +7,9 @@ const Banner = () => {
             <div className="hero min-h-screen" style={{ backgroundImage: `url("${bannerImg}")` }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Welcome to GameNote</h1>
+                    <div className="max-w-lg">
+                        <h1 className="mb-5 text-5xl font-bold">Welcome To <br /> <span className='lg:text-8xl'>Game Note</span></h1>
                         <p className="mb-5">This is a gmaing based platform which provides the top up service of various kind of games.</p>
-                        <button className="btn btn-primary">Get Started</button>
                     </div>
                 </div>
             </div>

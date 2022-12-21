@@ -3,8 +3,8 @@ import Chart from './Chart';
 
 const Statistics = () => {
     return (
-        <div className='w-fit mx-auto my-5'>
-            <h2 className='text-4xl text-center'>Site Stats</h2>
+        <div className='w-fit mx-auto my-5 lg:mb-12'>
+            <h2 className='text-4xl text-center lg:mb-5'>Site Stats</h2>
             {/* <div className="stats shadow"> */}
             <div className="md:grid md:grid-cols-2 lg:grid-cols-3 shadow">
 
@@ -40,7 +40,7 @@ const Statistics = () => {
 
             </div>
             {/* statistic chart  */}
-            <div className=''>
+            <div className='lg:my-10'>
                 <Chart></Chart>
             </div>
         </div>
