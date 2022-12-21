@@ -11,7 +11,7 @@ const Pricing = () => {
                     <p>100 previews</p>
                     <p>limited offers</p>
                 </div>
-                <button className='btn btn-primary btn-sm mt-5'>Free</button>
+                <button className='btn btn-primary btn-sm md:btn-md mt-5'>Free</button>
             </div>
             <div className='bg-gray-800 text-white shadow-md p-5 py-12 text-center rounded-lg'>
                 <p>Premium</p>
@@ -22,7 +22,7 @@ const Pricing = () => {
                     <p>Event offers</p>
                     <p>Special offers</p>
                 </div>
-                <button className='btn btn-primary btn-sm mt-5'>Buy Now</button>
+                <button className='btn btn-primary btn-sm md:btn-md mt-5'>Buy Now</button>
             </div>
             <div className='bg-base-200 shadow-md p-5 py-12 text-center rounded-lg'>
                 <p>Advance</p>
